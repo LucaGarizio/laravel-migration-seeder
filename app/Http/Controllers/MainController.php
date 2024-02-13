@@ -13,8 +13,10 @@ class MainController extends Controller
     {
         
         $today = Carbon::today();
+        $tomorrow = Carbon::tomorrow();
 
         $trains = Train::whereDate('orario_di_partenza', $today)->get();
+        $trains = Train::whereDate('orario_di_arrivo', $tomorrow)->get();
 
         return view('pages.index', compact('trains'));
     }

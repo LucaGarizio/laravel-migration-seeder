@@ -17,12 +17,14 @@ class TrainFactory extends Factory
     public function definition()
     {
         return [
-           
+            
+            
+
             'nome' => fake() -> unique() -> word(10),
             'luogo' => fake() -> sentence(1),
-            'orario_di_partenza' => fake() -> dateTimeInInterval('-2 days', '+2 days'),
-            'orario_di_arrivo' => fake() -> time(),
-            'codice_treno' => fake() -> unique() -> randomNumber(),
+            'orario_di_partenza' => fake() -> dateTimeInInterval('-0 days', '+ 0 days'),
+            'orario_di_arrivo' => fake() -> dateTimeInInterval('-0 days' , '+1 days'),
+            'codice_treno' => fake() -> unique() -> ean8(),
             'numero_carrozze' => fake() -> randomDigitNot(0), 
             'disponibile' => fake() -> boolean(),
             'cancellato' => fake() -> boolean()
