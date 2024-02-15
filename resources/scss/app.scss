@@ -1,5 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 
+body {
+    background-color: #333;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
 ul {
     padding: 0;
     list-style: none;
@@ -16,6 +27,7 @@ ul {
 .container {
     width: 100%;
 }
+
 h6 {
     color: black;
     padding-top: 10px;

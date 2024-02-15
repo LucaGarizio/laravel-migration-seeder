@@ -20,8 +20,8 @@ class TrainFactory extends Factory
             
             
 
-            'nome' => fake() -> unique() -> word(10),
-            'luogo' => fake() -> sentence(1),
+            'agenzia' => fake() -> unique() -> word(),
+            'luogo' => fake() -> city(),
             'orario_di_partenza' => fake() -> dateTimeInInterval('-0 days', '+ 0 days'),
             'orario_di_arrivo' => fake() -> dateTimeInInterval('-0 days' , '+1 days'),
             'codice_treno' => fake() -> unique() -> ean8(),
